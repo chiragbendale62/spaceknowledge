@@ -23,7 +23,7 @@ class SearchScreen extends StatelessWidget {
           maintainBottomViewPadding: false,
           bottom: false,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+            padding: const EdgeInsets.only(left: 24,right: 24, top: 24,bottom: 0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -112,41 +112,45 @@ class SearchScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 3.h),
                       Expanded(
-                        child: ListView.separated(
+                        child: ListView.builder(
                           primary: true,
                           shrinkWrap: true,
                           padding: const EdgeInsets.only(),
                           itemCount: provider.planetsList.length,
-                          separatorBuilder: (context, index) {
-                            return SizedBox(height: 2.4.h);
-                          },
+
                           itemBuilder: (context, index) {
                             var planet = provider.planetsList[index];
-                            return ListTile(
-                              contentPadding: const EdgeInsets.only(),
-                              horizontalTitleGap: 24,
-                              leading: Image.asset(
-                                planet.imagePath,
-                                height: 52,
-                                width: 52,
-                              ),
-                              title: Text(
-                                planet.title,
-                                style: TextStyle(
-                                  fontSize: 16.sp,
-                                  color: AppColors.blueLightColor,
-                                  fontWeight: FontWeight.w500,
-                                  fontFamily: AppString.gorditaFontFamily,
+                            return Padding(
+
+                              padding: EdgeInsets.only(bottom: 2.4.h),
+                              child: ListTile(
+                                contentPadding: const EdgeInsets.only(),
+                                horizontalTitleGap: 24,
+                                leading: Image.asset(
+                                  planet.imagePath,
+                                  height: 52,
+                                  width: 52,
                                 ),
+                                title: Text(
+                                  planet.title,
+                                  style: TextStyle(
+                                    fontSize: 16.sp,
+                                    color: AppColors.blueLightColor,
+                                    fontWeight: FontWeight.w500,
+                                    fontFamily: AppString.gorditaFontFamily,
+                                  ),
+                                ),
+                                onTap: () {},
                               ),
-                              onTap: () {},
                             );
                           },
                         ),
                       ),
+
                     ],
                   ),
                 ),
+
               ],
             ),
           ),

@@ -12,13 +12,6 @@ void main() {
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-  // SystemChrome.setSystemUIOverlayStyle(
-  //   SystemUiOverlayStyle(
-  //     statusBarColor: AppColors.black,
-  //     systemNavigationBarColor: AppColors.navBarBgColor,
-  //     systemNavigationBarDividerColor: AppColors.white,
-  //   ),
-  // );
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   FlutterNativeSplash.remove();
