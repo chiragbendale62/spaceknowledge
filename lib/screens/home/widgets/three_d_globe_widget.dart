@@ -44,6 +44,7 @@ class _ThreeDGlobeWidgetState extends State<ThreeDGlobeWidget> with SingleTicker
     _controller = FlutterEarthGlobeController(
       rotationSpeed: 0.05,
       zoom: 0.62,
+      // maxZoom: 10,
       isRotating: true,
       isZoomEnabled: false,
       isBackgroundFollowingSphereRotation: false,
@@ -72,7 +73,9 @@ class _ThreeDGlobeWidgetState extends State<ThreeDGlobeWidget> with SingleTicker
   @override
   Widget build(BuildContext context) {
     // var provider = Provider.of<HomeProvider>(context, listen: true);
-    double radius = MediaQuery.of(context).size.width < 500 ? ((MediaQuery.of(context).size.width / 3.8) - 20) : 120;
+    double radius = MediaQuery.of(context).size.width < 500
+        ? ((MediaQuery.of(context).size.width / 3.8) - 20)
+        : 120;
     return Stack(
       alignment: Alignment.center,
       children: [
@@ -88,7 +91,8 @@ class _ThreeDGlobeWidgetState extends State<ThreeDGlobeWidget> with SingleTicker
 
         Hero(
           tag: widget.globe.title,
-          flightShuttleBuilder: (flightContext, animation, flightDirection, fromHeroContext, toHeroContext) {
+          flightShuttleBuilder:
+              (flightContext, animation, flightDirection, fromHeroContext, toHeroContext) {
             return FadeTransition(
               opacity: animation.drive(
                 Tween<double>(begin: 0.0, end: 1.0).chain(

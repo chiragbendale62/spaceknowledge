@@ -31,11 +31,11 @@ dependencies:
   flutter:
     sdk: flutter
   provider: ^6.1.2
-  cupertino_icons: ^1.0.6
-  webview_flutter: ^4.7.0
+  cupertino_icons: ^1.0.8
+  webview_flutter: ^4.10.0
   responsive_sizer: ^3.3.1
-  flutter_earth_globe: ^1.0.3
-  flutter_native_splash: ^2.4.0
+  flutter_earth_globe: ^1.0.5
+  flutter_native_splash: ^2.4.4
 
 dev_dependencies:
   flutter_test:
@@ -46,7 +46,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^4.0.0
+  flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -63,7 +63,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
-    - assets/svg/
+#    - assets/svg/
     - assets/globes/
   #   - images/a_dot_ham.jpeg
 
