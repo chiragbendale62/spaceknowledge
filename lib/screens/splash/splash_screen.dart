@@ -122,7 +122,9 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
                     pageTransition(const IndexScreen()),
                   );
                 },
-                borderRadius: const BorderRadius.all(Radius.circular(52)),
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(52),
+                ),
                 child: ClipRRect(
                   child: BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 0.5, sigmaY: 0.5),
