@@ -143,7 +143,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            'Go menu',
+                            'Go Menu',
                             style: TextStyle(
                               color: AppColors.white,
                               fontSize: 16,
